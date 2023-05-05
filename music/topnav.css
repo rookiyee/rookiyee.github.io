@@ -1,10 +1,4 @@
 <style>
-* {box-sizing: border-box;}
-
-body {
-  margin: 10;
-  font-family: Arial, Helvetica, sans-serif;
-}
 .DIV_BIG{
     width:300px;
     height:200px;
@@ -18,6 +12,14 @@ body {
     position:absolute;
     top:5px;
     left:320px;
+}
+</style>
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 10;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .topnav {
   overflow: hidden;
