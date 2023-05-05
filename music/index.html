@@ -22,10 +22,27 @@
   <p>從目錄挑選，或輸入關鍵字(如作者、歌名)</p>
 </div>
 <div class="DIV_BIG">
-  <a href="https://www.youtube.com/watch?v=5Of9Rh4BxVo&list=LL&index=1" target="_blank"><img src="聲之形.jpg"></img></a>
+  //<a href="https://www.youtube.com/watch?v=5Of9Rh4BxVo&list=LL&index=1" target="_blank"><img src="聲之形.jpg"></img></a>
 <div class="DIV_SMALL">
   <p>聲之形電影主題曲</p>
 </div>
 </div>
+<script>
+const links = [
+  { picture: "聲之形.jpg", url: "https://www.youtube.com/watch?v=5Of9Rh4BxVo&list=LL&index=1" },
+  { picture: "聲之形.jpg", url: "https://www.youtube.com/watch?v=5Of9Rh4BxVo&list=LL&index=1" },
+  { picture: "聲之形.jpg", url: "https://www.youtube.com/watch?v=5Of9Rh4BxVo&list=LL&index=1" }
+];
+
+for (let i = 0; i < links.length; i++) {
+  const link = document.createElement("a");
+  const img = document.createElement("img");
+  img.src=picture[i];
+  link.textContent = img;
+  link.href = links[i].url;
+  document.querySelector(".DIV_BIG").appendChild(link);
+}
+</script>
 </body>
+
 </html>
