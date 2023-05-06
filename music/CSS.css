@@ -47,11 +47,11 @@ body {
 /* Sidebar/left column */
 .side {
   flex: 20%;
-  background-color: #f1f1f1;
+  background-color: #ddd;
 }
 .side a {
   color: black;
-  background-color: lightgreen;
+  background-color: #ddd;
   display: flex;
   text-decoration: none;
   text-align: center;
@@ -60,7 +60,7 @@ body {
 
 /* Change color on hover */
 .side a:hover {
-  background-color: #ddd;
+  background-color: lightgreen;
   color: black;
 }
 
