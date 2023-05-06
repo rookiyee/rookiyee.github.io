@@ -31,15 +31,15 @@
   <div class="main">
     <h2>私心推薦</h2>
     <p><b>聲之形</b></p>
-    <div class="img" style="height:200px;"></div>
+    <div class="img"></div>
     <p>電影的配樂由牛尾憲輔譜寫，並由波麗佳音錄製。該片的主題曲為《關於戀愛的事》，由aiko演唱</p>
     <br>
     <p><b>聲之形</b></p>
-    <div class="img" style="height:200px;"></div>
+    <div class="img"></div>
     <p>電影的配樂由牛尾憲輔譜寫，並由波麗佳音錄製。該片的主題曲為《關於戀愛的事》，由aiko演唱</p>
     <br>
     <p><b>聲之形</b></p>
-    <div class="img" style="height:200px;"></div>
+    <div class="img"></div>
     <p>電影的配樂由牛尾憲輔譜寫，並由波麗佳音錄製。該片的主題曲為《關於戀愛的事》，由aiko演唱</p>
     <br>
   </div>
@@ -55,8 +55,8 @@ for (let i = 0; i < links.length; i++) {
   const link = document.createElement("a");
   const img = document.createElement("img");
   img.src=links[i].picture;
-  img.width=String(img.width*(200/img.height));
-  img.height="200";
+  img.width=String(img.width*(400/img.height));
+  img.height="400";
   link.target="_blank";
   link.href = links[i].url;
   link.appendChild(img);
