@@ -50,8 +50,8 @@ for (let i = 0; i < links.length; i++) {
   const link = document.createElement("a");
   const img = document.createElement("img");
   img.src=picture[i];
-  img.width=img.width*(200/img.height);
-  img.height=200;
+  img.width=String(img.width*(200/img.height));
+  img.height="200";
   link.textContent = img;
   link.href = links[i].url;
   document.querySelector(".img").appendChild(link);
