@@ -72,6 +72,7 @@ body {
 }
 
 .img {
+  height:400px;
   width: 100%;
 }
 .navbar a.active {
