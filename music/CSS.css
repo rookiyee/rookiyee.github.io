@@ -46,15 +46,16 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 30%;
+  flex: 20%;
   background-color: #f1f1f1;
 }
 .side a {
-  color: white;
+  color: black;
   background-color: lightgreen;
   display: flex;
   text-decoration: none;
   text-align: center;
+  padding: 60px;
 }
 
 /* Change color on hover */
@@ -65,7 +66,7 @@ body {
 
 /* Main column */
 .main {
-  flex: 70%;
+  flex: 80%;
   background-color: white;
   padding: 20px;
 }
