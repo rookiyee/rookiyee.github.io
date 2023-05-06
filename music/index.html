@@ -4,10 +4,17 @@
   <link rel="stylesheet" href="topnav.css">
 </head>
 <body>
-
-<div class="topnav">
-  <a class="active" href="index.html">Home</a>
-  <a href="select.html">音樂選擇</a>
+<div class="header">
+  <h1>歡迎來到音樂推薦平台</h1>
+  <p>有各種各樣的音樂供你挑選</p>
+  <p>從目錄挑選，或輸入關鍵字(如作者、歌名)</p>
+</div>
+<div class="navbar">
+  //<a class="active" href="index.html">Home</a>
+  <a href="index.html">私心推薦</a>
+  <a href="select.html">作者挑選</a>
+  <a href="select.html">語言挑選</a>
+  <a href="select.html">其他挑選</a>
   <div class="search-container">
     <form action="/action_page.php">
       <input type="text" placeholder="Search.." name="search">
@@ -15,17 +22,23 @@
     </form>
   </div>
 </div>
-
-<div style="padding-left:16px">
-  <h2>歡迎來到音樂推薦平台</h2>
-  <p>有各種各樣的音樂供你挑選</p>
-  <p>從目錄挑選，或輸入關鍵字(如作者、歌名)</p>
-</div>
-<div class="DIV_BIG">
-  //<a href="https://www.youtube.com/watch?v=5Of9Rh4BxVo&list=LL&index=1" target="_blank"><img src="聲之形.jpg"></img></a>
-<div class="DIV_SMALL">
-  <p>聲之形電影主題曲</p>
-</div>
+<div class="row">
+  <div class="side">
+    <a href="#">周杰倫</a>
+    <a href="#">周杰倫</a>
+    <a href="#">周杰倫</a>
+  </div>
+  <div class="main">
+    <h2>私心推薦</h2>
+    <p><b>聲之形</b></p>
+    <div class="img" style="height:200px;"></div>
+    <p>電影的配樂由牛尾憲輔譜寫，並由波麗佳音錄製。該片的主題曲為《關於戀愛的事》，由aiko演唱</p>
+    <br>
+    <p><b>聲之形</b></p>
+    <div class="img" style="height:200px;"></div>
+    <p>電影的配樂由牛尾憲輔譜寫，並由波麗佳音錄製。該片的主題曲為《關於戀愛的事》，由aiko演唱</p>
+    <br>
+  </div>
 </div>
 <script>
 const links = [
@@ -38,9 +51,11 @@ for (let i = 0; i < links.length; i++) {
   const link = document.createElement("a");
   const img = document.createElement("img");
   img.src=picture[i];
+  img.width=img.width*(200/img.height);
+  img.height=200;
   link.textContent = img;
   link.href = links[i].url;
-  document.querySelector(".DIV_BIG").appendChild(link);
+  document.querySelector(".img").appendChild(link);
 }
 </script>
 </body>
