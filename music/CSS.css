@@ -50,6 +50,20 @@ body {
   background-color: #f1f1f1;
   padding: 20px;
 }
+.side a {
+  color: black;
+  background-color: lightgreen;
+  display: flex;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Change color on hover */
+.side a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
 /* Main column */
 .main {
