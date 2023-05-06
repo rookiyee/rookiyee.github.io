@@ -48,6 +48,10 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
+  height:300px;
+  align-self: flex-start;
+  position: sticky;
+  top:50px;
   flex: 20%;
   position: sticky;
   top:0;
