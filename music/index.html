@@ -45,23 +45,86 @@
   </div>
 </div>
 <script>
-const links = [
-  { picture: "聲之形.jpg", url: "https://www.youtube.com/watch?v=5Of9Rh4BxVo&list=LL&index=1" },
-  { picture: "聲之形.jpg", url: "https://www.youtube.com/watch?v=5Of9Rh4BxVo&list=LL&index=1" },
-  { picture: "聲之形.jpg", url: "https://www.youtube.com/watch?v=5Of9Rh4BxVo&list=LL&index=1" }
-];
+Jay={"可愛女人":["Jay.jfif","https://www.youtube.com/watch?v=87VUC4J_0Ps"], "完美主義":["Jay.jfif","https://www.youtube.com/watch?v=gxZHH8x2zPg"], "星晴":["Jay.jfif","https://www.youtube.com/watch?v=sTNJsIcPSvE&pp=ygUG5pif5pm0"], "娘子":["Jay.jfif","https://www.youtube.com/watch?v=MpP9dw_j2PI&pp=ygUG5aiY5a2Q"], "鬥牛":["Jay.jfif","https://www.youtube.com/watch?v=npiAxeLtHDM&pp=ygUG6ayl54mb"], "黑色幽默":"https://www.youtube.com/watch?v=wRT-5heURhY&pp=ygUM6buR6Imy5bm96buY", "伊斯坦堡":["Jay.jfif","https://www.youtube.com/watch?v=s9wvjSkR_Ms&pp=ygUM5LyK5pav5Z2m5aCh"], "印地安老斑鳩":["Jay.jfif","https://www.youtube.com/watch?v=hnmWCmR6o7A&pp=ygUS5Y2w5Zyw5a6J6ICB5paR6bOp"], "龍捲風":["Jay.jfif","https://www.youtube.com/watch?v=RPWDeLqsN0g&pp=ygUJ6b6N5o2y6aKo"], "反方向的鐘":["Jay.jfif","https://www.youtube.com/watch?v=fuM1aVCGR8c&pp=ygUP5Y-N5pa55ZCR55qE6ZCY"]};
 
-for (let i = 0; i < links.length; i++) {
-  const link = document.createElement("a");
-  const img = document.createElement("img");
-  img.src=links[i].picture;
-  img.width=String(img.width*(400/img.height));
-  img.height="400";
-  link.target="_blank";
-  link.href = links[i].url;
-  link.appendChild(img);
-  document.querySelectorAll(".img")[i].appendChild(link);
-}
+fatancy={"愛在西元前":"https://www.youtube.com/watch?v=5XK2C9w6oVk&pp=ygUP5oSb5Zyo6KW_5YWD5YmN", "爸我回來了","https://www.youtube.com/watch?v=nhyT8HDT4lg&pp=ygUQ54i4IOaIkeWbnuS-huS6hg%3D%3D", "簡單愛":"https://www.youtube.com/watch?v=Y4xCVlyCvX4&pp=ygUJ57Ch5Zau5oSb", "忍者":"https://www.youtube.com/watch?v=55yJh4SHUBY&pp=ygUG5b-N6ICF", "開不了口":"https://www.youtube.com/watch?v=H7hpK6cm-6k&pp=ygUM6ZaL5LiN5LqG5Y-j", "上海 一九四三":"https://www.youtube.com/watch?v=CcfnZOJpbM4&pp=ygUT5LiK5rW3IOS4gOS5neWbm-S4iQ%3D%3D", "對不起":"https://www.youtube.com/watch?v=N2DkKFxijv0&pp=ygUJ5bCN5LiN6LW3", "威廉古堡":"https://www.youtube.com/watch?v=lCzWCxVAkfc&pp=ygUM5aiB5buJ5Y-k5aCh", "雙截棍":"https://www.youtube.com/watch?v=OR-0wptI_u0&pp=ygUJ6ZuZ5oiq5qON", "安靜":"https://www.youtube.com/watch?v=1hI-7vj2FhE&pp=ygUG5a6J6Z2c"};
+
+Octave_space={"半獸人":"https://www.youtube.com/watch?v=3I27c6t-0No&pp=ygUJ5Y2K54245Lq6", "半島鐵盒":"https://www.youtube.com/watch?v=duZDsG3tvoA&pp=ygUM5Y2K5bO26ZC155uS", "暗號":"https://www.youtube.com/watch?v=CYT9DPJdtS4&pp=ygUG5pqX6Jmf", "龍拳":"https://www.youtube.com/watch?v=_byK6M95hTc&pp=ygUG6b6N5ouz", "火車叨位去":"https://www.youtube.com/watch?v=K5qKpFLWaoA&pp=ygUP54Gr6LuK5Y-o5L2N5Y67", "分裂":"https://www.youtube.com/watch?v=eM6mF4RWhe0&pp=ygUG5YiG6KOC", "爺爺泡的茶":"https://www.youtube.com/watch?v=LdPjnubLRN0&pp=ygUP54i654i65rOh55qE6Iy2", "回到過去":"https://www.youtube.com/watch?v=MKNrnSsIwf8&pp=ygUM5Zue5Yiw6YGO5Y67", "米蘭的小鐵匠":"https://www.youtube.com/watch?v=KmaqqnLGUG0&pp=ygUS57Gz6Jit55qE5bCP6ZC15Yyg", "最後的戰役":"https://www.youtube.com/watch?v=ZcShYmOhHM0&pp=ygUP5pyA5b6M55qE5oiw5b25"};
+
+jay_mom={"以父之名":"https://www.youtube.com/watch?v=9q7JOQfcJQM&pp=ygUM5Lul54i25LmL5ZCN", "懦夫":"https://www.youtube.com/watch?v=Xi_RBDWZaT0&pp=ygUG5oem5aSr", "晴天":"https://www.youtube.com/watch?v=DYptgVvkVLQ&pp=ygUG5pm05aSp", "三年二班":"https://www.youtube.com/watch?v=_trE3M24kQY&pp=ygUM5LiJ5bm05LqM54-t", "東風破":"https://www.youtube.com/watch?v=qct0JLjaHDc&pp=ygUJ5p2x6aKo56C0", "妳聽得到":"https://www.youtube.com/watch?v=kLY11fv7fUk&pp=ygUM5aaz6IG95b6X5Yiw", "同一種調調":"https://www.youtube.com/watch?v=D0x09XJgyO4&pp=ygUP5ZCM5LiA56iu6Kq_6Kq_", "她的睫毛":"https://www.youtube.com/watch?v=gqzlB7Gla2E&pp=ygUM5aW555qE552r5q-b", "愛情懸崖":"https://www.youtube.com/watch?v=H5VQdhYh9rc&pp=ygUM5oSb5oOF5oe45bSW", "梯田":"https://www.youtube.com/watch?v=u9J99gB5psc&pp=ygUG5qKv55Sw", "雙刀":"https://www.youtube.com/watch?v=T4qPsRLjGCY&pp=ygUG6ZuZ5YiA"};
+
+seven_smell={"我的地盤":"https://www.youtube.com/watch?v=RJerfq6MqY0&pp=ygUM5oiR55qE5Zyw55uk", "七里香":"https://www.youtube.com/watch?v=Bbp9ZaJD_eA&pp=ygUJ5LiD6YeM6aaZ", "藉口":"https://www.youtube.com/watch?v=KcK8WurGpEQ&pp=ygUG6JeJ5Y-j", "外婆":"https://www.youtube.com/watch?v=Ur-x4pZT1Rk&pp=ygUG5aSW5amG", "將軍":"https://www.youtube.com/watch?v=PaJdceSx4JA&pp=ygUG5bCH6LuN", "擱淺":"https://www.youtube.com/watch?v=YJfHuATJYsQ&pp=ygUG5pOx5re6", "亂舞春秋":"https://www.youtube.com/watch?v=2Tg3uzSAkXk&pp=ygUM5LqC6Iie5pil56eL", "困獸之鬥":"https://www.youtube.com/watch?v=pm91leB_P8c&pp=ygUM5Zuw54245LmL6ayl", "園遊會":"https://www.youtube.com/watch?v=IoCoIxkGkVw&pp=ygUJ5ZyS6YGK5pyD", "止戰之殤":"https://www.youtube.com/watch?v=qIZ5MAwbeCg&pp=ygUM5q2i5oiw5LmL5q6k"};
+
+november={"夜曲":"https://www.youtube.com/watch?v=6Q0Pd53mojY&pp=ygUG5aSc5puy","藍色風暴":"https://www.youtube.com/watch?v=P7ItYKdY0WU&pp=ygUM6JeN6Imy6aKo5pq0", "髮如雪":"https://www.youtube.com/watch?v=aaM7qG2ycjk&pp=ygUJ6auu5aaC6Zuq", "黑色毛衣":"https://www.youtube.com/watch?v=bX33UI9ZPLk&pp=ygUM6buR6Imy5q-b6KGj", "四面楚歌":"https://www.youtube.com/watch?v=JljURsMOLmc&pp=ygUM5Zub6Z2i5qWa5q2M", "楓":"https://www.youtube.com/watch?v=qzwsQTY-99o&pp=ygUD5qWT", "浪漫手機":"https://www.youtube.com/watch?v=Kbvu9Vt5_eE&pp=ygUM5rWq5ryr5omL5qmf", "逆鱗":"https://www.youtube.com/watch?v=jD0c4QY7L8s&pp=ygUG6YCG6bGX", "麥芽糖":"https://www.youtube.com/watch?v=Hq47d-ouX_Y&pp=ygUJ6bql6Iq957OW", "珊瑚海":"https://www.youtube.com/watch?v=kYhh1PpsOg4&pp=ygUJ54-K55Ga5rW3", "飄移":"https://www.youtube.com/watch?v=X2njc8is50o&pp=ygUG6aOE56e7", "一路向北":"https://www.youtube.com/watch?v=L229QDxDakU&pp=ygUM5LiA6Lev5ZCR5YyX"};
+composer_Jay={"Jay":Jay, "范特西":fatancy, "八度空間":Octave_space, "葉惠美":jay_mom, "七里香":seven_smell, "11月的蕭邦":november};
+taiwan_composer={"周杰倫":composer_Jay};
+language={"中文":taiwan_composer};
+//all={"私心推薦": , "作者挑選": , "語言挑選":language, "其他挑選": };
+const links = [
+  { picture: "Jay.jfif", url: Jay},
+  { picture: "fantacy.png", url: fatancy },
+  { picture: "Octave_space.jpg", url: Octave_space},
+  { picture: "jay_mom.jpg", url: jay_mom },
+  { picture: "seven_smell.jpg", url: seven_smell},
+  { picture: "november.jpg", url: november}
+];
+  keywords="周杰倫";
+  //create前要先刪掉元件
+  function create(target){
+      
+        for (var key,value in target) {
+            if(value.constructor === Array){
+                const s_link = document.createElement("a");
+                s_link.textContent=key;
+                s_link.href = "#"+key;
+                document.querySelector(".side").appendChild(s_link);
+                const p = document.createElement("p");
+                const b = document.createElement("b");
+                b.textContent=key;
+                p.appendChild(b);
+                document.querySelector(".main").appendChild(p);
+                const div=document.createElement("div");
+                div.class="img";
+                div.id=key;
+                const link = document.createElement("a");
+                const img = document.createElement("img");
+                img.src=value[0];
+                img.width=String(img.width*(400/img.height));
+                img.height="400";
+                link.target="_blank";
+                link.href = value[1];
+                link.appendChild(img);
+                document.querySelector(".main").appendChild(link);
+              
+            }else
+            {
+                const h = document.createElement("h");
+                h.textContent=key;
+                document.querySelector(".side").appendChild(h);
+                create(value);
+            }
+        }
+  }
+  function isKey(dict){
+      if(dict.constructor === Array)
+          return "bottom";
+      target=dict.get(keywords);
+      if(target){
+          const element = document.createElement("h2");
+          element.textContent=keywords;
+          document.querySelectorAll(".main").appendChild(element);
+          create(target);
+          return true;
+      }
+      for (var value in dict.values()) {
+          flag=isKey(value);
+          if(flag=="bottom")
+              return false;
+          if(flag==true)
+              return true;
+      }
+      return false;
+  }
 </script>
 </body>
 
