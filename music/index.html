@@ -61,6 +61,7 @@ all={"私心推薦":recommend , "所有歌曲":language , "其他挑選":others 
                 const b = document.createElement("b");
                 b.textContent=key;
                 p.appendChild(b);
+                p.id=key;
                 document.querySelector(".main").appendChild(p);
                 const div=document.createElement("div");
                 div.class="img";
