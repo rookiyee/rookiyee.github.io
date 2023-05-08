@@ -117,14 +117,6 @@ for(var key in language){
         }
   }
   function isKey(dict,keywords){
-      document.querySelector(".side").innerHTML="";
-      document.querySelector(".main").innerHTML="";
-      const div_s = document.createElement("div");
-      div_s.class="side";
-      document.querySelector(".row").appendChild(div_s);
-      const div_m = document.createElement("div");
-      div_m.class="main";
-      document.querySelector(".row").appendChild(div_m);
       if(dict.constructor === Array)
           return "bottom";
       if(keywords in dict){
@@ -146,10 +138,26 @@ for(var key in language){
   }
   isKey(all,keywords);
   function composer_change(){
+      document.querySelector(".side").innerHTML="";
+      document.querySelector(".main").innerHTML="";
+      const div_s = document.createElement("div");
+      div_s.class="side";
+      document.querySelector(".row").appendChild(div_s);
+      const div_m = document.createElement("div");
+      div_m.class="main";
+      document.querySelector(".row").appendChild(div_m);
       keywords=document.querySelector("#作者挑選").value;
       isKey(all,keywords);
   }
   function language_change(){
+      document.querySelector(".side").innerHTML="";
+      document.querySelector(".main").innerHTML="";
+      const div_s = document.createElement("div");
+      div_s.class="side";
+      document.querySelector(".row").appendChild(div_s);
+      const div_m = document.createElement("div");
+      div_m.class="main";
+      document.querySelector(".row").appendChild(div_m);
       keywords=document.querySelector("#語言挑選").value;
       isKey(all,keywords);
   }
