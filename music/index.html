@@ -12,12 +12,11 @@
 </div>
 <div class="navbar">
   <a href="index.html">私心推薦</a>
-  <select onchange="javascript:location.href=this.value;">
-    <option>作者挑選</option>
-    <option value="#星晴">乳液</option>
-    <option value="#愛在西元前">精華素</option>
-    <option value="http://tw.yahoo.com">保濕霜</option>
-   
+  <select id="作者挑選">
+    
+  </select>
+  <select id="語言挑選">
+    
   </select>
   <a href="select.html">所有歌曲</a>
   <a href="select.html">其他挑選</a>
@@ -54,9 +53,32 @@ language={"中文":chinese_composer};
 recommend={};
 others={};
 all={"私心推薦":recommend , "所有歌曲":language , "其他挑選":others };
+for(var i in language){
+    i_value=language[i];
+    for(var key in i_value){
+        const option = document.createElement("option");
+        option.textContent=key;
+        option.addEventListener("change", isKey.bind(null,i_value[key],key));
+        document.querySelector("#作者挑選").appendChild(option);
+    }
+}
+for(var key in language){
+      const option = document.createElement("option");
+      option.textContent=key;
+      option.addEventListener("change", isKey.bind(null,language[key],key));
+      document.querySelector("#語言挑選").appendChild(option);
+}
   keywords="所有歌曲";
   //create前要先刪掉元件
   function create(target){
+        document.querySelector(".side").remove();
+        document.querySelector(".main").remove();
+        const div_s = document.createElement("div");
+        div_s.class="side";
+        document.querySelector(".row").appendChild(div_s);
+        const div_m = document.createElement("div");
+        div_m.class="main";
+        document.querySelector(".row").appendChild(div_m);
         for (var key in target) {
             const value=target[key];
             if(value.constructor === Array){
@@ -101,7 +123,7 @@ all={"私心推薦":recommend , "所有歌曲":language , "其他挑選":others 
             }
         }
   }
-  function isKey(dict){
+  function isKey(dict,keywords){
       if(dict.constructor === Array)
           return "bottom";
       if(keywords in dict){
