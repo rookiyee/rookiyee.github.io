@@ -127,8 +127,9 @@ for(var key in language){
           create(target);
           return true;
       }
-      for (var value in dict.values()) {
-          flag=isKey(value);
+      for (var key in dict) {
+      		value=dict[key];
+          flag=isKey(value,keywords);
           if(flag=="bottom")
               return false;
           if(flag==true)
