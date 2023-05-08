@@ -64,7 +64,13 @@ body {
   text-align: center;
   padding: 30px;
 }
-
+.side h {
+  color: black;
+  background-color: lightblue;
+  display: flex;
+  text-align: center;
+  padding: 20px 0px;
+}
 /* Change color on hover */
 .side a:hover {
   background-color: lightgreen;
