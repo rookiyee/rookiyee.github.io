@@ -13,10 +13,10 @@
 <div class="navbar">
   <a href="index.html">私心推薦</a>
   <select id="作者挑選">
-    
+      <option>作者挑選</option>
   </select>
   <select id="語言挑選">
-    
+      <option>語言挑選</option>
   </select>
   <a href="select.html">所有歌曲</a>
   <a href="select.html">其他挑選</a>
@@ -53,22 +53,23 @@ language={"中文":chinese_composer};
 recommend={};
 others={};
 all={"私心推薦":recommend , "所有歌曲":language , "其他挑選":others };
+keywords="所有歌曲";
+document.querySelector("#作者挑選").addEventListener("change", composer_change);
+document.querySelector("#語言挑選").addEventListener("change", language_change);
 for(var i in language){
     i_value=language[i];
     for(var key in i_value){
         const option = document.createElement("option");
         option.textContent=key;
-        document.querySelector("#作者挑選").addEventListener("change", isKey.bind(null,i_value[key],key));
         document.querySelector("#作者挑選").appendChild(option);
     }
 }
 for(var key in language){
       const option = document.createElement("option");
       option.textContent=key;
-      document.querySelector("#語言挑選").addEventListener("change", isKey.bind(null,language[key],key));
       document.querySelector("#語言挑選").appendChild(option);
 }
-  keywords="所有歌曲";
+ 
   //create前要先刪掉元件
   function create(target){
         for (var key in target) {
@@ -144,6 +145,14 @@ for(var key in language){
       return false;
   }
   isKey(all,keywords);
+  function composer_change(){
+      keywords=document.querySelector("#作者挑選").value;
+      isKey(all,keywords);
+  }
+  function language_change(){
+      keywords=document.querySelector("#語言挑選").value;
+      isKey(all,keywords);
+  }
 </script>
 </body>
 
