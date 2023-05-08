@@ -71,14 +71,6 @@ for(var key in language){
   keywords="所有歌曲";
   //create前要先刪掉元件
   function create(target){
-        document.querySelector(".side").remove();
-        document.querySelector(".main").remove();
-        const div_s = document.createElement("div");
-        div_s.class="side";
-        document.querySelector(".row").appendChild(div_s);
-        const div_m = document.createElement("div");
-        div_m.class="main";
-        document.querySelector(".row").appendChild(div_m);
         for (var key in target) {
             const value=target[key];
             if(value.constructor === Array){
@@ -124,6 +116,14 @@ for(var key in language){
         }
   }
   function isKey(dict,keywords){
+      document.querySelector(".side").innerHTML="";
+      document.querySelector(".main").innerHTML="";
+      const div_s = document.createElement("div");
+      div_s.class="side";
+      document.querySelector(".row").appendChild(div_s);
+      const div_m = document.createElement("div");
+      div_m.class="main";
+      document.querySelector(".row").appendChild(div_m);
       if(dict.constructor === Array)
           return "bottom";
       if(keywords in dict){
