@@ -58,14 +58,14 @@ for(var i in language){
     for(var key in i_value){
         const option = document.createElement("option");
         option.textContent=key;
-        option.addEventListener("change", isKey.bind(null,i_value[key],key));
+        document.querySelector("#作者挑選").addEventListener("change", isKey.bind(null,i_value[key],key));
         document.querySelector("#作者挑選").appendChild(option);
     }
 }
 for(var key in language){
       const option = document.createElement("option");
       option.textContent=key;
-      option.addEventListener("change", isKey.bind(null,language[key],key));
+      document.querySelector("#語言挑選").addEventListener("change", isKey.bind(null,language[key],key));
       document.querySelector("#語言挑選").appendChild(option);
 }
   keywords="所有歌曲";
