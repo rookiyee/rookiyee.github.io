@@ -25,7 +25,13 @@ body {
   top:0;
   background-color: #333;
 }
-
+.navbar select {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #333;
+}
 /* Style the navigation bar links */
 .navbar a {
   color: white;
