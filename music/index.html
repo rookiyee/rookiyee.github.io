@@ -94,7 +94,7 @@ all={"私心推薦":recommend , "所有歌曲":language , "其他挑選":others 
           target=dict[keywords];
           const element = document.createElement("h2");
           element.textContent=keywords;
-          document.querySelectorAll(".main").appendChild(element);
+          document.querySelector(".main").appendChild(element);
           create(target);
           return true;
       }
