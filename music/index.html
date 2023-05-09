@@ -12,14 +12,14 @@
 </div>
 <div class="navbar">
   <a href="index.html">私心推薦</a>
-  <select id="作者挑選">
-      <option>作者挑選</option>
-  </select>
+  <a href="select.html">所有歌曲</a>
+  <a href="select.html">其他挑選</a>
   <select id="語言挑選">
       <option>語言挑選</option>
   </select>
-  <a href="select.html">所有歌曲</a>
-  <a href="select.html">其他挑選</a>
+  <select id="作者挑選">
+      <option>作者挑選</option>
+  </select>
   <div class="search-container">
     <form action="/action_page.php">
       <input type="text" placeholder="Search.." name="search">
@@ -141,25 +141,22 @@ for(var key in language){
   function composer_change(){
       document.querySelector(".side").innerHTML="";
       document.querySelector(".main").innerHTML="";
-      const div_s = document.createElement("div");
-      div_s.class="side";
-      document.querySelector(".row").appendChild(div_s);
-      const div_m = document.createElement("div");
-      div_m.class="main";
-      document.querySelector(".row").appendChild(div_m);
       keywords=document.querySelector("#作者挑選").value;
       isKey(all,keywords);
   }
   function language_change(){
       document.querySelector(".side").innerHTML="";
       document.querySelector(".main").innerHTML="";
-      const div_s = document.createElement("div");
-      div_s.class="side";
-      document.querySelector(".row").appendChild(div_s);
-      const div_m = document.createElement("div");
-      div_m.class="main";
-      document.querySelector(".row").appendChild(div_m);
+      document.querySelector("#作者挑選").innerHTML="";
+      const option = document.createElement("option");
+      option.textContent="作者挑選";
+      document.querySelector("#作者挑選").appendChild(option);
       keywords=document.querySelector("#語言挑選").value;
+      for(var key in language[keywords]){
+        const option = document.createElement("option");
+        option.textContent=key;
+        document.querySelector("#作者挑選").appendChild(option);
+      }
       isKey(all,keywords);
   }
 </script>
