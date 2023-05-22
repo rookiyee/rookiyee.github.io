@@ -91,11 +91,11 @@ for(var key in language){
             div.id=target;
             const link = document.createElement("a");
             const img = document.createElement("img");
-            img.src=value[0];
+            img.src=target[0];
             img.width=String(img.width*(400/img.height));
             img.height="400";
             link.target="_blank";
-            link.href = value[1];
+            link.href = target[1];
             link.appendChild(img);
             div.appendChild(link);
             document.querySelector(".main").appendChild(div);
