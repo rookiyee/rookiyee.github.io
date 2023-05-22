@@ -92,7 +92,7 @@ for(var key in language){
             const link = document.createElement("a");
             const img = document.createElement("img");
             img.src=target[0];
-            img.width=String(img.width*(400/img.height));
+            img.width=String(parseInt(img.width)*(400/parseInt(img.height)));
             img.height="400";
             link.target="_blank";
             link.href = target[1];
@@ -122,7 +122,7 @@ for(var key in language){
                 const link = document.createElement("a");
                 const img = document.createElement("img");
                 img.src=value[0];
-                img.width=String(img.width*(400/img.height));
+                img.width=String(parseInt(img.width)*(400/parseInt(img.height)));
                 img.height="400";
                 link.target="_blank";
                 link.href = value[1];
