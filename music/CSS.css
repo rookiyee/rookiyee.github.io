@@ -111,7 +111,7 @@ body {
   border: none;
 }
 
-.navbar .search-container input {
+.navbar input[type=submit] {
   float: right;
   padding: 6px 10px;
   margin-top: 8px;
@@ -121,7 +121,7 @@ body {
   border: none;
   cursor: pointer;
 }
-.navbar .search-container input:hover {
+.navbar input[type=submit]:hover {
   background: #ccc;
 }
 /* Footer */
