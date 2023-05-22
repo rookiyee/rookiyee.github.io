@@ -58,7 +58,7 @@ document.querySelector("#作者挑選").addEventListener("change", composer_chan
 document.querySelector("#語言挑選").addEventListener("change", language_change);
 document.querySelector("#searching").addEventListener('submit', event => {
             event.preventDefault();
-            keywords = form.elements['search'].value;
+            keywords = document.querySelector("#searching").elements['search'].value;
             document.querySelector("#語言挑選").value="語言挑選";
             document.querySelector("#作者挑選").value="作者挑選";
             document.querySelector(".side").innerHTML="";
