@@ -88,17 +88,17 @@ for(var key in language){
         if(target.constructor === Array){
             const div=document.createElement("div");
             div.class="img";
+            div.id=target;
             const link = document.createElement("a");
             const img = document.createElement("img");
             img.src=target[0];
-            img.id=target;
             link.target="_blank";
             link.href = target[1];
             link.appendChild(img);
             div.appendChild(link);
             document.querySelector(".main").appendChild(div);
-            document.querySelector("#"+target).width=String(parseInt(img.width)*(400/parseInt(img.height)));
-            document.querySelector("#"+target).height="400";
+            document.querySelector("#"+target).querySelector("img").width=String(parseInt(img.width)*(400/parseInt(img.height)));
+            document.querySelector("#"+target).querySelector("img").height="400";
             const br = document.createElement("br");
             document.querySelector(".main").appendChild(br);
             return;
@@ -118,17 +118,17 @@ for(var key in language){
                 document.querySelector(".main").appendChild(p);
                 const div=document.createElement("div");
                 div.class="img";
+                div.id=key;
                 const link = document.createElement("a");
                 const img = document.createElement("img");
                 img.src=value[0];
-                img.id=key;
                 link.target="_blank";
                 link.href = value[1];
                 link.appendChild(img);
                 div.appendChild(link);
                 document.querySelector(".main").appendChild(div);
-                document.querySelector("#"+key).width=String(parseInt(img.width)*(400/parseInt(img.height)));
-                document.querySelector("#"+key).height="400";
+                document.querySelector("#"+key).querySelector("img").width=String(parseInt(img.width)*(400/parseInt(img.height)));
+                document.querySelector("#"+key).querySelector("img").height="400";
                 const br = document.createElement("br");
                 document.querySelector(".main").appendChild(br);
             }else
