@@ -85,6 +85,34 @@ for(var key in language){
  
   //create前要先刪掉元件
   function create(target){
+        if(target.constructor === Array){
+            const s_link = document.createElement("a");
+            s_link.textContent=key;
+            s_link.href = "#"+key;
+            document.querySelector(".side").appendChild(s_link);
+            const p = document.createElement("p");
+            const b = document.createElement("b");
+            b.textContent=key;
+            p.appendChild(b);
+            p.id=key;
+            document.querySelector(".main").appendChild(p);
+            const div=document.createElement("div");
+            div.class="img";
+            div.id=key;
+            const link = document.createElement("a");
+            const img = document.createElement("img");
+            img.src=value[0];
+            img.width=String(img.width*(400/img.height));
+            img.height="400";
+            link.target="_blank";
+            link.href = value[1];
+            link.appendChild(img);
+            div.appendChild(link);
+            document.querySelector(".main").appendChild(div);
+            const br = document.createElement("br");
+            document.querySelector(".main").appendChild(br);
+            return;
+        }
         for (var key in target) {
             const value=target[key];
             if(value.constructor === Array){
