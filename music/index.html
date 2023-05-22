@@ -21,7 +21,7 @@
       <option>作者挑選</option>
   </select>
   <div class="search-container">
-    <form action="/action_page.php">
+    <form id="searching" method="post">
       <input type="text" placeholder="Search.." name="search">
       <button type="submit">submit</button>
     </form>
@@ -56,7 +56,7 @@ all={"私心推薦":recommend , "所有歌曲":language , "其他挑選":others 
 keywords="所有歌曲";
 document.querySelector("#作者挑選").addEventListener("change", composer_change);
 document.querySelector("#語言挑選").addEventListener("change", language_change);
-document.querySelector(".search-container").addEventListener('submit', event => {
+document.querySelector("#searching").addEventListener('submit', event => {
             event.preventDefault();
             keywords = form.elements['search'].value;
             document.querySelector("#語言挑選").value="語言挑選";
