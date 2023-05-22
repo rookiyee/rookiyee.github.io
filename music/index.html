@@ -96,9 +96,11 @@ for(var key in language){
             link.href = target[1];
             link.appendChild(img);
             div.appendChild(link);
+            img.onload=function(){
+                img.width=String(parseInt(img.width)*(400/parseInt(img.height)));
+                img.height="400";
+            };
             document.querySelector(".main").appendChild(div);
-            document.querySelector("#"+target).querySelector("img").width=String(parseInt(img.width)*(400/parseInt(img.height)));
-            document.querySelector("#"+target).querySelector("img").height="400";
             const br = document.createElement("br");
             document.querySelector(".main").appendChild(br);
             return;
@@ -126,9 +128,11 @@ for(var key in language){
                 link.href = value[1];
                 link.appendChild(img);
                 div.appendChild(link);
+                img.onload=function(){
+                    img.width=String(parseInt(img.width)*(400/parseInt(img.height)));
+                    img.height="400";
+                };
                 document.querySelector(".main").appendChild(div);
-                document.querySelector("#"+key).querySelector("img").width=String(parseInt(img.width)*(400/parseInt(img.height)));
-                document.querySelector("#"+key).querySelector("img").height="400";
                 const br = document.createElement("br");
                 document.querySelector(".main").appendChild(br);
             }else
