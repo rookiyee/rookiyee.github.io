@@ -56,6 +56,19 @@ all={"私心推薦":recommend , "所有歌曲":language , "其他挑選":others 
 keywords="所有歌曲";
 document.querySelector("#作者挑選").addEventListener("change", composer_change);
 document.querySelector("#語言挑選").addEventListener("change", language_change);
+document.querySelector(".search-container").addEventListener('submit', event => {
+            event.preventDefault();
+            keywords = form.elements['search'].value;
+            document.querySelector("#語言挑選").value="語言挑選";
+            document.querySelector("#作者挑選").value="作者挑選";
+            document.querySelector(".side").innerHTML="";
+            document.querySelector(".main").innerHTML="";
+            if(isKey(all,keywords)==false){
+                const h1 = document.createElement("h1");
+                h1.textContent="查無此項目!";
+                document.querySelector(".main").appendChild(h1);
+            }
+        });
 for(var i in language){
     i_value=language[i];
     for(var key in i_value){
