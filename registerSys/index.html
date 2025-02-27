@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>music</title>
+  <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+<div class="header">
+  <h1>歡迎來到音樂推薦平台</h1>
+  <p>有各種各樣的音樂供你挑選</p>
+  <p>從目錄挑選，或輸入關鍵字(如作者、專輯、歌名...)</p>
+</div>
+<div class="navbar">
+  <a href="recommended.html">私心推薦</a>
+  <a href="index.html">所有歌曲</a>
+  <select id="語言挑選">
+      <option>語言挑選</option>
+  </select> 
+  <select id="作者挑選">
+      <option>作者挑選</option>
+  </select>
+  <div class="search-container">
+    <form id="searching" method="post">
+      <input type="text" placeholder="Search.." name="search">
+      <input type="submit" value="submit">
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="side">
+    
+  </div>
+  <div class="main">
+    
+  </div>
+</div>
+<script>
+Jay={"可愛女人":["Jay.jfif","https://www.youtube.com/watch?v=87VUC4J_0Ps"], "完美主義":["Jay.jfif","https://www.youtube.com/watch?v=gxZHH8x2zPg"], "星晴":["Jay.jfif","https://www.youtube.com/watch?v=sTNJsIcPSvE&pp=ygUG5pif5pm0"], "娘子":["Jay.jfif","https://www.youtube.com/watch?v=MpP9dw_j2PI&pp=ygUG5aiY5a2Q"], "鬥牛":["Jay.jfif","https://www.youtube.com/watch?v=npiAxeLtHDM&pp=ygUG6ayl54mb"], "黑色幽默":["Jay.jfif","https://www.youtube.com/watch?v=wRT-5heURhY&pp=ygUM6buR6Imy5bm96buY"], "伊斯坦堡":["Jay.jfif","https://www.youtube.com/watch?v=s9wvjSkR_Ms&pp=ygUM5LyK5pav5Z2m5aCh"], "印地安老斑鳩":["Jay.jfif","https://www.youtube.com/watch?v=hnmWCmR6o7A&pp=ygUS5Y2w5Zyw5a6J6ICB5paR6bOp"], "龍捲風":["Jay.jfif","https://www.youtube.com/watch?v=RPWDeLqsN0g&pp=ygUJ6b6N5o2y6aKo"], "反方向的鐘":["Jay.jfif","https://www.youtube.com/watch?v=fuM1aVCGR8c&pp=ygUP5Y-N5pa55ZCR55qE6ZCY"]};
+
+fatancy={"愛在西元前":["fantacy.png","https://www.youtube.com/watch?v=5XK2C9w6oVk&pp=ygUP5oSb5Zyo6KW_5YWD5YmN"], "爸我回來了":["fantacy.png","https://www.youtube.com/watch?v=nhyT8HDT4lg&pp=ygUQ54i4IOaIkeWbnuS-huS6hg%3D%3D"], "簡單愛":["fantacy.png","https://www.youtube.com/watch?v=Y4xCVlyCvX4&pp=ygUJ57Ch5Zau5oSb"], "忍者":["fantacy.png","https://www.youtube.com/watch?v=55yJh4SHUBY&pp=ygUG5b-N6ICF"], "開不了口":["fantacy.png","https://www.youtube.com/watch?v=H7hpK6cm-6k&pp=ygUM6ZaL5LiN5LqG5Y-j"], "上海 一九四三":["fantacy.png","https://www.youtube.com/watch?v=CcfnZOJpbM4&pp=ygUT5LiK5rW3IOS4gOS5neWbm-S4iQ%3D%3D"], "對不起":["fantacy.png","https://www.youtube.com/watch?v=N2DkKFxijv0&pp=ygUJ5bCN5LiN6LW3"], "威廉古堡":["fantacy.png","https://www.youtube.com/watch?v=lCzWCxVAkfc&pp=ygUM5aiB5buJ5Y-k5aCh"], "雙截棍":["fantacy.png","https://www.youtube.com/watch?v=OR-0wptI_u0&pp=ygUJ6ZuZ5oiq5qON"], "安靜":["fantacy.png","https://www.youtube.com/watch?v=1hI-7vj2FhE&pp=ygUG5a6J6Z2c"]};
+
+Octave_space={"半獸人":["Octave_space.jpg","https://www.youtube.com/watch?v=3I27c6t-0No&pp=ygUJ5Y2K54245Lq6"], "半島鐵盒":["Octave_space.jpg","https://www.youtube.com/watch?v=duZDsG3tvoA&pp=ygUM5Y2K5bO26ZC155uS"], "暗號":["Octave_space.jpg","https://www.youtube.com/watch?v=CYT9DPJdtS4&pp=ygUG5pqX6Jmf"], "龍拳":["Octave_space.jpg","https://www.youtube.com/watch?v=_byK6M95hTc&pp=ygUG6b6N5ouz"], "火車叨位去":["Octave_space.jpg","https://www.youtube.com/watch?v=K5qKpFLWaoA&pp=ygUP54Gr6LuK5Y-o5L2N5Y67"], "分裂":["Octave_space.jpg","https://www.youtube.com/watch?v=eM6mF4RWhe0&pp=ygUG5YiG6KOC"], "爺爺泡的茶":["Octave_space.jpg","https://www.youtube.com/watch?v=LdPjnubLRN0&pp=ygUP54i654i65rOh55qE6Iy2"], "回到過去":["Octave_space.jpg","https://www.youtube.com/watch?v=MKNrnSsIwf8&pp=ygUM5Zue5Yiw6YGO5Y67"], "米蘭的小鐵匠":["Octave_space.jpg","https://www.youtube.com/watch?v=KmaqqnLGUG0&pp=ygUS57Gz6Jit55qE5bCP6ZC15Yyg"], "最後的戰役":["Octave_space.jpg","https://www.youtube.com/watch?v=ZcShYmOhHM0&pp=ygUP5pyA5b6M55qE5oiw5b25"]};
+
+jay_mom={"以父之名":["jay_mom.jpg","https://www.youtube.com/watch?v=9q7JOQfcJQM&pp=ygUM5Lul54i25LmL5ZCN"], "懦夫":["jay_mom.jpg","https://www.youtube.com/watch?v=Xi_RBDWZaT0&pp=ygUG5oem5aSr"], "晴天":["jay_mom.jpg","https://www.youtube.com/watch?v=DYptgVvkVLQ&pp=ygUG5pm05aSp"], "三年二班":["jay_mom.jpg","https://www.youtube.com/watch?v=_trE3M24kQY&pp=ygUM5LiJ5bm05LqM54-t"], "東風破":["jay_mom.jpg","https://www.youtube.com/watch?v=qct0JLjaHDc&pp=ygUJ5p2x6aKo56C0"], "妳聽得到":["jay_mom.jpg","https://www.youtube.com/watch?v=kLY11fv7fUk&pp=ygUM5aaz6IG95b6X5Yiw"], "同一種調調":["jay_mom.jpg","https://www.youtube.com/watch?v=D0x09XJgyO4&pp=ygUP5ZCM5LiA56iu6Kq_6Kq_"], "她的睫毛":["jay_mom.jpg","https://www.youtube.com/watch?v=gqzlB7Gla2E&pp=ygUM5aW555qE552r5q-b"], "愛情懸崖":["jay_mom.jpg","https://www.youtube.com/watch?v=H5VQdhYh9rc&pp=ygUM5oSb5oOF5oe45bSW"], "梯田":["jay_mom.jpg","https://www.youtube.com/watch?v=u9J99gB5psc&pp=ygUG5qKv55Sw"], "雙刀":["jay_mom.jpg","https://www.youtube.com/watch?v=T4qPsRLjGCY&pp=ygUG6ZuZ5YiA"]};
+
+seven_smell={"我的地盤":["seven_smell.jpg","https://www.youtube.com/watch?v=RJerfq6MqY0&pp=ygUM5oiR55qE5Zyw55uk"], "七里香":["seven_smell.jpg","https://www.youtube.com/watch?v=Bbp9ZaJD_eA&pp=ygUJ5LiD6YeM6aaZ"], "藉口":["seven_smell.jpg","https://www.youtube.com/watch?v=KcK8WurGpEQ&pp=ygUG6JeJ5Y-j"], "外婆":["seven_smell.jpg","https://www.youtube.com/watch?v=Ur-x4pZT1Rk&pp=ygUG5aSW5amG"], "將軍":["seven_smell.jpg","https://www.youtube.com/watch?v=PaJdceSx4JA&pp=ygUG5bCH6LuN"], "擱淺":["seven_smell.jpg","https://www.youtube.com/watch?v=YJfHuATJYsQ&pp=ygUG5pOx5re6"], "亂舞春秋":["seven_smell.jpg","https://www.youtube.com/watch?v=2Tg3uzSAkXk&pp=ygUM5LqC6Iie5pil56eL"], "困獸之鬥":["seven_smell.jpg","https://www.youtube.com/watch?v=pm91leB_P8c&pp=ygUM5Zuw54245LmL6ayl"], "園遊會":["seven_smell.jpg","https://www.youtube.com/watch?v=IoCoIxkGkVw&pp=ygUJ5ZyS6YGK5pyD"], "止戰之殤":["seven_smell.jpg","https://www.youtube.com/watch?v=qIZ5MAwbeCg&pp=ygUM5q2i5oiw5LmL5q6k"]};
+
+november={"夜曲":["november.jpg","https://www.youtube.com/watch?v=6Q0Pd53mojY&pp=ygUG5aSc5puy"],"藍色風暴":["november.jpg","https://www.youtube.com/watch?v=P7ItYKdY0WU&pp=ygUM6JeN6Imy6aKo5pq0"], "髮如雪":["november.jpg","https://www.youtube.com/watch?v=aaM7qG2ycjk&pp=ygUJ6auu5aaC6Zuq"], "黑色毛衣":["november.jpg","https://www.youtube.com/watch?v=bX33UI9ZPLk&pp=ygUM6buR6Imy5q-b6KGj"], "四面楚歌":["november.jpg","https://www.youtube.com/watch?v=JljURsMOLmc&pp=ygUM5Zub6Z2i5qWa5q2M"], "楓":["november.jpg","https://www.youtube.com/watch?v=qzwsQTY-99o&pp=ygUD5qWT"], "浪漫手機":["november.jpg","https://www.youtube.com/watch?v=Kbvu9Vt5_eE&pp=ygUM5rWq5ryr5omL5qmf"], "逆鱗":["november.jpg","https://www.youtube.com/watch?v=jD0c4QY7L8s&pp=ygUG6YCG6bGX"], "麥芽糖":["november.jpg","https://www.youtube.com/watch?v=Hq47d-ouX_Y&pp=ygUJ6bql6Iq957OW"], "珊瑚海":["november.jpg","https://www.youtube.com/watch?v=kYhh1PpsOg4&pp=ygUJ54-K55Ga5rW3"], "飄移":["november.jpg","https://www.youtube.com/watch?v=X2njc8is50o&pp=ygUG6aOE56e7"], "一路向北":["november.jpg","https://www.youtube.com/watch?v=L229QDxDakU&pp=ygUM5LiA6Lev5ZCR5YyX"]};
+composer_Jay={"Jay":Jay, "范特西":fatancy, "八度空間":Octave_space, "葉惠美":jay_mom, "七里香":seven_smell, "11月的蕭邦":november};
+she_say={"她說":["she_say.jpg","https://www.youtube.com/watch?v=BocMPQv9brE&pp=ygUQ5LuW6KqqIOael-S_iuWCkQ%3D%3D"], "愛笑的眼睛":["she_say.jpg","https://www.youtube.com/watch?v=ACAzJG5ZN7w&pp=ygUY5oSb56yR55qE55y8552b5p6X5L-K5YKR"], "只對你有感覺":["she_say.jpg","https://www.youtube.com/watch?v=ttUYm61ckNw&pp=ygUc5Y-q5bCN5L2g5pyJ5oSf6Ka6IOael-S_iuWCkQ%3D%3D"], "當你":["she_say.jpg","https://www.youtube.com/watch?v=wc3AnslwwMg&pp=ygUQ55W25L2gIOael-S_iuWCkQ%3D%3D"], "一眼萬年":["she_say.jpg","https://www.youtube.com/watch?v=A4ZuleH59FQ&pp=ygUW5LiA55y86JCs5bm0IOael-S_iuWCkQ%3D%3D"], "保護色":["she_say.jpg","https://www.youtube.com/watch?v=zcjrgu04K5g&pp=ygUT5L-d6K236ImyIOael-S_iuWCkQ%3D%3D"], "握不住的他":["she_say.jpg","https://www.youtube.com/watch?v=Ks9aqEOpPXU&pp=ygUZ5o-h5LiN5L2P55qE5LuWIOael-S_iuWCkQ%3D%3D"], "心牆":["she_say.jpg","https://www.youtube.com/watch?v=9dFtR-IEb7c&pp=ygUQ5b-D54mGIOael-S_iuWCkQ%3D%3D"], "我很想愛他":["she_say.jpg","https://www.youtube.com/watch?v=5YNmUcHTbpE&pp=ygUY5oiR5b6I5oOz5oSb5LuW5p6X5L-K5YKR"], "一生的愛":["she_say.jpg","https://www.youtube.com/watch?v=j0xXDWMdgV4&pp=ygUV5LiA55Sf55qE5oSb5p6X5L-K5YKR"], "記得":["she_say.jpg","https://www.youtube.com/watch?v=NCE8xoq7vgk&pp=ygUP6KiY5b6X5p6X5L-K5YKR"], "完美新世界":["she_say.jpg","https://www.youtube.com/watch?v=FyH3tw8NQlI&pp=ygUY5a6M576O5paw5LiW55WM5p6X5L-K5YKR"], "I AM":["she_say.jpg","https://www.youtube.com/watch?v=cIopmiZYZvo&pp=ygUNSSBBTeael-S_iuWCkQ%3D%3D"]};
+composer_JJ={"她說 概念自選輯":she_say};
+STRAY_SHEEP={"カムパネルラ":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=XeFQJ6-XoD0&pp=ygUS44Kr44Og44OR44ON44Or44Op"], "Flamingo":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=Uh6dkL1M9DM&pp=ygUIRmxhbWluZ28%3D"], "感電":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=UFQEttrn6CQ&pp=ygUHCeaEn-mbuw%3D%3D"], "PLACEBO + 野田洋次郎":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=vmEHDSQpE8s&pp=ygUICVBMQUNFQk8%3D"], "紅辣椒":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=s582L3gujnw&pp=ygUW57SF6L6j5qSSIOexs-a0peeOhOW4qw%3D%3D"], "馬和鹿":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=ptnYBctoexk&pp=ygUJ6aas5ZKM6bm_"], "善良的人":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=iVKMlMlEDVg&pp=ygUZ5ZaE6Imv55qE5Lq6IOexs-a0peeOhOW4qw%3D%3D"], "Lemon":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=SX_ViT4Ra7k&pp=ygUFbGVtb24%3D"], "找錯遊戲":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=zgOxItQP0S0&pp=ygUZ5om-6Yyv6YGK5oiyIOexs-a0peeOhOW4qw%3D%3D"], "向日葵":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=TLeQstFOeFQ&pp=ygUW5ZCR5pel6JG1IOexs-a0peeOhOW4qw%3D%3D"], "迷途之羊":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=DAeERkHEy00&pp=ygUZ6L-36YCU5LmL576KIOexs-a0peeOhOW4qw%3D%3D"], "Décolleté":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=l6ZBoygz8hU&pp=ygUZCUTDqWNvbGxldMOpIOexs-a0peeOhOW4qw%3D%3D"], "TEENAGE RIOT":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=lwolyOIcCQg&pp=ygUZVEVFTkFHRSBSSU9UIOexs-a0peeOhOW4qw%3D%3D"], "海之幽靈":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=1s84rIhPuhk&pp=ygUZ5rW35LmL5bm96Z2IIOexs-a0peeOhOW4qw%3D%3D"], "金絲雀":["米津玄師/STRAY SHEEP.jfif","https://www.youtube.com/watch?v=JAMNqRBL_CY&pp=ygUW6YeR57Wy6ZuAIOexs-a0peeOhOW4qw%3D%3D"]};
+BOOTLEG={"灰色と青":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=gJX2iy6nhHc&pp=ygUZ54Gw6Imy44Go6Z2SIOexs-a0peeOhOW4qw%3D%3D"], "打上花火":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=-tKVN2mAKRI&pp=ygUaCeaJk-S4iuiKseeBqyDnsbPmtKXnjoTluKs%3D"],"Nighthawks":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=kXv1XRs62k0&pp=ygUYCU5pZ2h0aGF3a3Mg57Gz5rSl546E5bir"], "愛麗絲":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=jpuCalaBVpA&pp=ygUXCQnmhJvpupfntbLnsbPmtKXnjoTluKs%3D"], "ナンバーナイン":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=vP6l_p4KJpI&pp=ygUlCQkJ44OK44Oz44OQ44O844OK44Kk44OzIOexs-a0peeOhOW4qw%3D%3D"], "fogbound":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=PrCQJ9JdufI&pp=ygUUZm9nYm91bmTnsbPmtKXnjoTluKs%3D"], "春雷":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=zkNzxsaCunU&pp=ygUTCeaYpembt-exs-a0peeOhOW4qw%3D%3D"], "Moonlight":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=zkNzxsaCunU&pp=ygUTCeaYpembt-exs-a0peeOhOW4qw%3D%3D"], "かいじゅうのマーチ":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=_AfZwbht5yE&pp=ygUpCeOBi-OBhOOBmOOCheOBhuOBruODnuODvOODgXTnsbPmtKXnjoTluKs%3D"], "orion":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=lzAyrgSqeeE&pp=ygUSCW9yaW9u57Gz5rSl546E5bir"], "砂の惑星":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=AS4q9yaWJkI&pp=ygUaCeegguOBruaDkeaYnwnnsbPmtKXnjoTluKs%3D"], "ピースサイン":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=9aJVr5tTTWk&pp=ygUgCeODlOODvOOCueOCteOCpOODswnnsbPmtKXnjoTluKs%3D"], "LOSER":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=Dx_fKPBPYUI&pp=ygUTCUxPU0VSIOexs-a0peeOhOW4qw%3D%3D"], "飛燕":["米津玄師/BOOTLEG.jfif","https://www.youtube.com/watch?v=V9y6y7uo5Z8&pp=ygUUCemjm-eHlSDnsbPmtKXnjoTluKs%3D"]};  
+composer_Hachi={"STRAY SHEEP":STRAY_SHEEP, "BOOTLEG":BOOTLEG};
+yoasobi={"向夜晚奔去":["yoasobi/1.jpg","https://www.youtube.com/watch?v=x8VYWazR5mE&pp=ygUPIHlvYXNvYmkg5aSc6amF"], "重現夢境":["yoasobi/2.png","https://www.youtube.com/watch?v=sAuEeM_6zpk&pp=ygUM6YeN54--5aSi5aKD"], "春紫菀":["yoasobi/3.jpg","https://www.youtube.com/watch?v=kzdJkT4kp-A&pp=ygUR5pil57Sr6I-AIFlPQVNPQkk%3D"], "或許":["yoasobi/9.png","https://www.youtube.com/watch?v=kzdJkT4kp-A&pp=ygUR5pil57Sr6I-AIFlPQVNPQkk%3D"], "群青":["yoasobi/4.png","https://www.youtube.com/watch?v=Y4nEEZwckuU&pp=ygUO576k6Z2SIHlvYXNvYmk%3D"], "怪物":["yoasobi/5.jpg","https://www.youtube.com/watch?v=dy90tA3TT1c&pp=ygUPCeaAqueJqSB5b2Fzb2Jp"], "溫柔的彗星":["yoasobi/6.png","https://www.youtube.com/watch?v=VyvhvlYvRnc&pp=ygUW5rqr5p-U55qE5b2X5pifeW9hc29iaQ%3D%3D"], "三原色":["yoasobi/7.jfif","https://www.youtube.com/watch?v=nhOhFOoURnE&pp=ygURCeS4ieWOn-iJsnlvYXNvYmk%3D"], "偶像":["yoasobi/8.png","https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUMSWRvbCB5b2Fzb2Jp"]};
+eve={"廻廻奇譚":["Eve/1.jpg","https://www.youtube.com/watch?v=1tk1pqwrOys"], "蒼のワルツ":["Eve/2.jpg","https://www.youtube.com/watch?v=pyDCubgU57g"], "心海":["Eve/3.jpg","https://www.youtube.com/watch?v=vRPCAAUBMms"], "群青讃歌":["Eve/4.jpg","https://www.youtube.com/watch?v=sgZjbk9eH6g"], "暴徒":["Eve/5.jfif","https://www.youtube.com/watch?v=8McISUEXb9g"], "擬劇論":["Eve/6.jpg","https://www.youtube.com/watch?v=jJzw1h5CR-I"], "トーキョーゲットー":["Eve/7.jpg","https://www.youtube.com/watch?v=PvzBWFGEz8M"], "存在理由":["Eve/8.jfif","https://www.youtube.com/watch?v=ulfY8WQE_HE"], "アウトサイダー":["Eve/9.jpg","https://www.youtube.com/watch?v=GMPjNA_fCj4"]};  
+mili={"Mortal With You":["mili/1.jpg","https://www.youtube.com/watch?v=bJieaH23524"], "In Hell We Live":["mili/2.jpg","https://www.youtube.com/watch?v=XfTWgMgknpY"], "Salt, Pepper, Birds, and the Thought Police":["mili/3.jpg","https://www.youtube.com/watch?v=Dca9gJyjoAg"], "From a Place of Love":["mili/4.jpg","https://www.youtube.com/watch?v=xyx8DMlUAQ4"], "String Theocracy":["mili/5.jpg","https://www.youtube.com/watch?v=nOj_A3aZxGs"], "Rightfully":["mili/6.jpg","https://www.youtube.com/watch?v=Q6Ik94T99Ag"], "Summoning 101":["mili/7.jpg","https://www.youtube.com/watch?v=x6q41EnhPnU"], "Utopiosphere":["mili/8.jpg","https://www.youtube.com/watch?v=eCm--tb5SKg"], "Bathtub Mermaid":["mili/9.jpg","https://www.youtube.com/watch?v=-n-iqXTztVQ"]};
+Ed_Sheeran={"Perfect":["紅髮艾德/1.jpg","https://www.youtube.com/watch?v=2Vv-BfVoq4g"], "Shape of You":["紅髮艾德/2.png","https://www.youtube.com/watch?v=JGwWNGJdvx8"], "Photograph":["紅髮艾德/3.jpg","https://www.youtube.com/watch?v=nSDgHBxUbVQ"], "Thinking Out Loud":["紅髮艾德/4.jpg","https://www.youtube.com/watch?v=lp-EO5I60KA"], "Bad Habits":["紅髮艾德/5.jpg","https://www.youtube.com/watch?v=orJSJGHjBLI"], "Shivers":["紅髮艾德/6.jpg","https://www.youtube.com/watch?v=Il0S8BoucSA"]};
+Joe_Hisaishi={"龍貓":["久石讓/1.jfif","https://www.youtube.com/watch?v=pzRvAVf26E4&pp=ygUN6Yu855C0IOm-jeiykw%3D%3D"], "魔女宅急便":["久石讓/2.jpg","https://www.youtube.com/watch?v=BnfyVQ0YKnU&pp=ygUP6a2U5aWz5a6F5oCl5L6_"], "紅豬":["久石讓/3.jpg","https://www.youtube.com/watch?v=xfKbOohDVPA&pp=ygUG57SF6LGs"],"魔法公主":["久石讓/4.jpg","https://www.youtube.com/watch?v=lddN1vJ6njg&pp=ygUM6a2U5rOV5YWs5Li7"], "神隱少女":["久石讓/5.jpg","https://www.youtube.com/watch?v=bL9krjcyK3w&pp=ygUM56We6Zqx5bCR5aWz"], "霍爾的移動城堡":["久石讓/6.jfif","https://www.youtube.com/watch?v=OuieVBnF80Y&pp=ygUV6ZyN54i-55qE56e75YuV5Z-O5aCh"], "天空之城":["久石讓/7.jpg","https://www.youtube.com/watch?v=L5tsSroyMB4&pp=ygUM5aSp56m65LmL5Z-O"]};
+deemo={"Marigold":["deemo/1.jpg","https://www.youtube.com/watch?v=4oPM8zTeois&pp=ygUFZGVlbW8%3D"], "Magnolia":["deemo/2.jpg","https://www.youtube.com/watch?v=Gz83g-82Q9c&pp=ygUFZGVlbW8%3D"], "Anima":["deemo/3.jpg","https://www.youtube.com/watch?v=don_p8iPYoQ&pp=ygULYW5pbWEgZGVlbW8%3D"], "Entrance":["deemo/4.jpg","https://www.youtube.com/watch?v=f3ESZSrKvkI"], "Lost in the nowhere":["deemo/5.jpg","https://www.youtube.com/watch?v=6vlIYl_dBwA"], "Sunset":["deemo/6.jpg","https://www.youtube.com/watch?v=8On2lQenMIQ&pp=ygUGc3Vuc2V0"]};
+vk={"琴之翼":["VK/1.jpg","https://www.youtube.com/watch?v=NAECXrAH5ec&pp=ygUPdmvlhYsg55C05LmL57-8"], "鏡夜":["VK/2.jpg","https://www.youtube.com/watch?v=8Wk2dJD-U8I&pp=ygUQ6Y-h5aScIOeQtOS5i-e_vA%3D%3D"], "Evolution Era":["VK/3.jpg","https://www.youtube.com/watch?v=VBBKZ3hQWpU&pp=ygUQRXZvbHV0aW9uIEVyYSBWSw%3D%3D"], "Pure White":["VK/2.jpg","https://www.youtube.com/watch?v=gSh8sb7RQ6s&pp=ygUNUHVyZSBXaGl0ZSBWSw%3D%3D"], "Reverse - Parallel Universe":["VK/4.jpg","https://www.youtube.com/watch?v=zX0dxglQv1k&pp=ygUeUmV2ZXJzZSAtIFBhcmFsbGVsIFVuaXZlcnNlIFZL"], "光 無盡墜落的美麗":["VK/5.jpg","https://www.youtube.com/watch?v=IxX78L9jihw&pp=ygUc5YWJIOeEoeeboeWinOiQveeahOe-jum6lyBWSw%3D%3D"]};
+chinese_composer={"周杰倫":composer_Jay,"林俊傑":composer_JJ};
+japanese_composer={"米津玄師":composer_Hachi,"YOASOBI":yoasobi, "Eve":eve};
+english_composer={"mili":mili, "紅髮艾德":Ed_Sheeran};
+pure_music={"久石讓":Joe_Hisaishi, "Deemo":deemo, "V.K克":vk};
+language={"中文":chinese_composer, "日文":japanese_composer, "英文":english_composer, "純音樂":pure_music};
+all={"所有歌曲":language};
+keywords="所有歌曲";
+document.querySelector("#作者挑選").addEventListener("change", composer_change);
+document.querySelector("#語言挑選").addEventListener("change", language_change);
+document.querySelector("#searching").addEventListener('submit', event => {
+            event.preventDefault();
+            keywords = document.querySelector("#searching").elements['search'].value;
+            document.querySelector("#語言挑選").value="語言挑選";
+            document.querySelector("#作者挑選").value="作者挑選";
+            document.querySelector(".side").innerHTML="";
+            document.querySelector(".main").innerHTML="";
+            if(isKey(all,keywords)==false){
+                const h1 = document.createElement("h1");
+                h1.textContent="查無此項目!";
+                document.querySelector(".main").appendChild(h1);
+            }
+        });
+for(var i in language){
+    i_value=language[i];
+    for(var key in i_value){
+        const option = document.createElement("option");
+        option.textContent=key;
+        document.querySelector("#作者挑選").appendChild(option);
+    }
+}
+for(var key in language){
+      const option = document.createElement("option");
+      option.textContent=key;
+      document.querySelector("#語言挑選").appendChild(option);
+}
+ 
+  //create前要先刪掉元件
+  function create(target){
+        if(target.constructor === Array){
+            const div=document.createElement("div");
+            div.class="img";
+            div.id=target;
+            const link = document.createElement("a");
+            const img = document.createElement("img");
+            img.src=target[0];
+            link.target="_blank";
+            link.href = target[1];
+            link.appendChild(img);
+            div.appendChild(link);
+            img.onload=function(){
+                img.width=String(parseInt(img.width)*(400/parseInt(img.height)));
+                img.height="400";
+            };
+            document.querySelector(".main").appendChild(div);
+            const br = document.createElement("br");
+            document.querySelector(".main").appendChild(br);
+            return;
+        }
+        for (var key in target) {
+            const value=target[key];
+            if(value.constructor === Array){
+                const s_link = document.createElement("a");
+                s_link.textContent=key;
+                s_link.href = "#"+key;
+                document.querySelector(".side").appendChild(s_link);
+                const p = document.createElement("p");
+                const b = document.createElement("b");
+                b.textContent=key;
+                p.appendChild(b);
+                p.id=key;
+                document.querySelector(".main").appendChild(p);
+                const div=document.createElement("div");
+                div.class="img";
+                div.id=key;
+                const link = document.createElement("a");
+                const img = document.createElement("img");
+                img.src=value[0];
+                link.target="_blank";
+                link.href = value[1];
+                link.appendChild(img);
+                div.appendChild(link);
+                img.onload=function(){
+                    img.width=String(parseInt(img.width)*(400/parseInt(img.height)));
+                    img.height="400";
+                };
+                document.querySelector(".main").appendChild(div);
+                const br = document.createElement("br");
+                document.querySelector(".main").appendChild(br);
+            }else
+            {
+                const h1 = document.createElement("h");
+                const b1 = document.createElement("b");
+                b1.textContent=">>"+key;
+                h1.appendChild(b1);
+                document.querySelector(".side").appendChild(h1);
+                const h2 = document.createElement("h3");
+                const b2 = document.createElement("b");
+                b2.textContent=">>"+key;
+                h2.appendChild(b2);
+              	document.querySelector(".main").appendChild(h2);
+                create(value);
+            }
+        }
+  }
+  function isKey(dict,keywords){
+      if(dict.constructor === Array)
+          return "bottom";
+      if(keywords in dict){
+          target=dict[keywords];
+          const element = document.createElement("h2");
+          element.textContent=keywords;
+          document.querySelector(".main").appendChild(element);
+          create(target);
+          return true;
+      }
+      for (var key in dict) {
+      		value=dict[key];
+          flag=isKey(value,keywords);
+          if(flag=="bottom")
+              return false;
+          if(flag==true)
+              return true;
+      }
+      return false;
+  }
+  isKey(all,keywords);
+  function composer_change(){
+      keywords=document.querySelector("#作者挑選").value;
+      if(keywords=="作者挑選")
+          return;
+      document.querySelector(".side").innerHTML="";
+      document.querySelector(".main").innerHTML="";
+      isKey(all,keywords);
+  }
+  function language_change(){
+      keywords=document.querySelector("#語言挑選").value;
+      if(keywords=="語言挑選")
+          return;
+      document.querySelector(".side").innerHTML="";
+      document.querySelector(".main").innerHTML="";
+      document.querySelector("#作者挑選").innerHTML="";
+      const option = document.createElement("option");
+      option.textContent="作者挑選";
+      document.querySelector("#作者挑選").appendChild(option);
+      for(var key in language[keywords]){
+        const option = document.createElement("option");
+        option.textContent=key;
+        document.querySelector("#作者挑選").appendChild(option);
+      }
+      isKey(all,keywords);
+  }
+</script>
+</body>
+
+</html>
