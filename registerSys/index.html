@@ -1,12 +1,36 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>map</title>
-    </head>
-    <body>
-        <img src="88.png" border="0" alt="海洋" usemap="#sea",width="225" height="225">
-        <map name="sea">
-            <area shape="circle" coords="120,120,120" href="../index.html" alt="首頁">
-        </map>
-    </body>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Register System</title>
+</head>
+<body>
+  <h1>Enter your name</h1>
+  <form id="nameForm">
+    <input type="text" id="nameInput" placeholder="輸入姓名" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('nameForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('nameInput').value;
+      // 請將下方 URL 換成你的後端 API 位址
+      fetch('http://localhost:5000/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name: name })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.message);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
 </html>
